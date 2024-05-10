@@ -1,8 +1,7 @@
 import streamlit as st
 from internal.intro import get_intro
 from internal.setup_pieces_connection.setup import check_setup
-from internal.chatbot.chat import chat
-from internal.environment.read_env import read_env_file
+from internal.chatbot.chat import chatbot
 
 # MARK: - Page Config
 st.set_page_config(page_title="Pieces ChatBot Load Test", page_icon="", layout="wide")
@@ -11,7 +10,7 @@ st.set_page_config(page_title="Pieces ChatBot Load Test", page_icon="", layout="
 page_names_to_funcs = {
     "-": get_intro,
     "Check Pieces Connection": check_setup,
-    "Chatbot": chat,
+    "Chatbot": chatbot,
 }
 
 app = st.sidebar.selectbox("Choose a function", list(page_names_to_funcs.keys()))
