@@ -28,7 +28,7 @@ def chatbot():
     response = requests.get(url=f"http://{IP}:{PORT}/models")
     api_response = response.json()
     # Assuming 'models' is the correct key containing the list of models
-    models = {model['name']: model['id'] for model in api_response['iterable'] if model['cloud'] or model['downloading']}
+    models = {model["name"]:{"uuid":model["id"]} for model in response if model["cloud"] or model.get("downloaded",False)}
 
     # Set default model
     default_model_name = "GPT-3.5-turbo Chat Model"
