@@ -1,2 +1,2 @@
 streamlit==1.34.0
-pieces-os-client==1.2.7
+pieces-os-client==2.0.0.post1
