@@ -1,5 +1,5 @@
 websocket
 websocket-client
-pieces-os-client==1.2.7
+pieces-os-client==2.2.0
 streamlit
 threaded
